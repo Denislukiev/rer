@@ -1,0 +1,196 @@
+body {
+    background: url('logo.png') no-repeat center center;
+    background-size: cover;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.bgvideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -9999;
+    filter: blur(1px);
+}
+
+.logo {
+    position: absolute;
+    width: 10vw; /* Используем относительные единицы */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 1;
+    left: 2vw; /* Используем относительные единицы */
+}
+
+.content {
+    position: relative;
+    top: 35px;
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: 1;
+}
+
+#podval {
+    position: fixed;
+    bottom: 2vh; /* Используем относительные единицы */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(204, 204, 204, 0.7);
+    font-family: 'Dancing Script', cursive;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    font-size: 2vw; /* Используем относительные единицы */
+    max-width: 600px;
+    text-align: center;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    padding: 1vh; /* Используем относительные единицы */
+}
+
+#content {
+    backdrop-filter: blur(5px);
+    font-family: 'Dancing Script', cursive;
+    font-size: 3vw; /* Используем относительные единицы */
+    line-height: 1.5;
+    color: white;
+}
+
+.button {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: rgb(255, 255, 255);
+    padding: 1vh 2vw; /* Используем относительные единицы */
+    font-size: 2vw; /* Используем относительные единицы */
+    cursor: pointer;
+    margin: 1vh;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+    backdrop-filter: blur(9px);
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: rgba(0, 153, 204, 0.7);
+    border-radius: 50px;
+    transform: scale(1.1);
+}
+
+.kontent {
+    position: relative;
+    background-color: rgba(170, 169, 169, 0.822);
+    margin: 2vh auto; /* Используем относительные единицы */
+    padding: 2vh; /* Используем относительные единицы */
+    z-index: 1;
+    width: 80%;
+    max-width: 1000px;
+    height: auto;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.school-title {
+    position: relative;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 5vw; /* Используем относительные единицы */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    backdrop-filter: blur(10px);
+    padding: 2vh; /* Используем относительные единицы */
+}
+
+/* Медиазапросы для адаптации под разные размеры экранов */
+
+@media (max-width: 600px) {
+    .logo {
+        width: 20vw;
+        height: auto;
+    }
+    #content {
+        font-size: 4vw;
+        margin-top: 25%;
+        display: flex;
+        align-items: center; /* Центрирование кнопок */
+        justify-content: center; /* Центрирование кнопок */
+    }
+    .school-title {
+        font-size: 6vw;
+    }
+    .button {
+        font-size: 3vw;
+        padding: 2vh 4vw;
+    }
+    #podval {
+        font-size: 3vw;
+        padding: 2vh;
+    }
+}
+
+@media (max-width: 900px) {
+    .logo {
+        width: 15vw;
+        height: auto;
+    }
+    #content {
+        font-size: 3.5vw;
+    }
+    .school-title {
+        font-size: 5.5vw;
+    }
+    .button {
+        font-size: 2.5vw;
+        padding: 1.5vh 3vw;
+    }
+    #podval {
+        font-size: 2.5vw;
+    }
+}
+
+@media (max-width: 1200px) {
+    .logo {
+        width: 12vw;
+        height: auto;
+    }
+    #content {
+        font-size: 3vw;
+    }
+    .school-title {
+        font-size: 5vw;
+    }
+    .button {
+        font-size: 2vw;
+        padding: 1vh 2vw;
+    }
+    #podval {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 1600px) {
+    .logo {
+        width: 10vw;
+        height: auto;
+    }
+    #content {
+        font-size: 2.5vw;
+    }
+    .school-title {
+        font-size: 4.5vw;
+    }
+    .button {
+        font-size: 1.8vw;
+        padding: 1vh 1.5vw;
+    }
+    #podval {
+        font-size: 1.8vw;
+    }
+}
